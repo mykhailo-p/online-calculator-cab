@@ -16,26 +16,26 @@
             <h3>Application loans amount:</h3>
         </div>
         <div>
-            <div>
-                <h4>Loan #1</h4>
-                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_1">
-                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_1">
-                <input type="text" placeholder="Month" class="short-input" id="car_maturity_1">
-                <input type="text" placeholder="Price %" class="short-input" id="car_price_1">
+            <div class="loans-block">
+                <p>Loan 1:</p>
+                <input type="number" min="0.0" max="10000.0" placeholder="Car price tsd UAH" class="long-input" id="car_value_1" value="0.0">
+                <input type="number" min="20" max="90" step="1" placeholder="Advance %" class="short-input" id="car_advance_1" value="0.0">
+                <input type="number" min="12" max="60" step="12" placeholder="Month" class="short-input" id="car_maturity_1" value="12">
+                <input type="number" min="0.01" max="20" step="0.01" placeholder="Price %" class="short-input" id="car_price_1" value="0.0">
             </div>
-            <div>
-                <h4>Loan #2</h4>
-                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_2">
-                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_2">
-                <input type="text" placeholder="Month" class="short-input" id="car_maturity_2">
-                <input type="text" placeholder="Price %" class="short-input" id="car_price_2">
+            <div class="loans-block">
+                <p>Loan 2:</p>
+                <input type="number" min="0.0" max="10000.0" placeholder="Car price tsd UAH" class="long-input" id="car_value_2" value="0.0">
+                <input type="number" min="20" max="90" step="1"placeholder="Advance %" class="short-input" id="car_advance_2" value="0.0">
+                <input type="number" min="12" max="60" step="12" placeholder="Month" class="short-input" id="car_maturity_2" value="12">
+                <input type="text" placeholder="Price %" class="short-input" id="car_price_2" value="0.0">
             </div>
-            <div>
-                <h4>Loan #3</h4>
-                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_3">
-                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_3">
-                <input type="text" placeholder="Month" class="short-input" id="car_maturity_3">
-                <input type="text" placeholder="Price %" class="short-input" id="car_price_3">
+            <div class="loans-block">
+                <p>Loan 3:</p>
+                <input type="number" min="0.0" max="10000.0" placeholder="Car price tsd UAH" class="long-input" id="car_value_3" value="0.0">
+                <input type="number" min="20" max="90" step="1" placeholder="Advance %" class="short-input" id="car_advance_3" value="0.0">
+                <input type="number" min="12" max="60" step="12" placeholder="Month" class="short-input" id="car_maturity_3" value="12">
+                <input type="text" placeholder="Price %" class="short-input" id="car_price_3" value="0.0">
             </div>
         </div>
 
@@ -45,31 +45,95 @@
         <div>
             <h3>Financical Parametrs:</h3>
         </div>
-        <div>
-            <h4>Revenue</h4>
-            <input type="text" placeholder="Periods" class="wide-input" id="period"><br>
-            <input type="text" placeholder="Revenue" class="wide-input" id="revenue"><br>
-            <input type="text" placeholder="Operation revenue" class="wide-input" id="op_rev">
-            <input type="text" placeholder="Operation expenses" class="wide-input" id="op_exp"><br>
-            <input type="text" placeholder="Amortization" class="wide-input" id="amortization"><br>
-            <input type="text" placeholder="Current revenue" class="wide-input" id="cur_rev">
-            <input type="text" placeholder="Current expenses" class="wide-input" id="cur_exp"><br>
+        <h4>Revenue</h4>
+        <div class="finance-block">
+            <div style="width: 30%">
+                <p class="finance-block-text">Month of report:</p>
+                <p class="finance-block-text">Revenue: </p>
+                <p class="finance-block-text">Operation flow: </p>
+                <p class="finance-block-text">Amortiazation: </p>
+                <p class="finance-block-text">Carrency: </p>
+            </div>
+            <div class="revenue-param">
+                <input type="text" placeholder="Periods" class="double-input" id="period" value="12">
+                <input type="text" placeholder="Revenue" class="double-input" id="revenue" value="0">
+                <input type="text" placeholder="Operation revenue" class="half-input" id="op_rev" value="0">
+                <input type="text" placeholder="Operation expenses" class="half-input" id="op_exp" value="0">
+                <input type="text" placeholder="Amortization" class="double-input" id="amortization" value="0">
+                <input type="text" placeholder="Currency revenue" class="half-input" id="cur_rev" value="0">
+                <input type="text" placeholder="Currency expenses" class="half-input" id="cur_exp" value="0">
+            </div>
+
         </div>
-        <div>
-            <h4>Equity and balance</h4>
-            <input type="text" placeholder="Equity" class="wide-input">
-            <input type="text" placeholder="Balance" class="wide-input">
+        <h4>Equity and balance</h4>
+        <div class="finance-block">   
+            <div style="width: 30%">
+                <p class="finance-block-text">Equity: </p>
+                <p class="finance-block-text">Balance: </p>
+            </div>
+            <div style="width: 69%">
+                <input type="text" placeholder="Equity" class="double-input" value="0.0" id="equity">
+                <input type="text" placeholder="Balance" class="double-input" value="0.0">
+            </div>
         </div>
     </div>
     <!-- Frame with loan portfolio -->
     <div class="loans-frame">
-
+        <h3>Loan portfolio:</h3>
+        <div class="loans-block">
+            <select class="one-tree-input" id="loan_type_1" value="None">
+                <option>None</option>
+                <option>Invest</option>
+                <option>Current assets</option>
+            </select>
+            <input type="text" placeholder="Price %" class="one-one-input" id="loan_amount_1" value="0.0">
+            <input type="text" placeholder="Amount" class="one-one-input" id="loan_price_1" value="0.0">
+            <input type="text" placeholder="Final date" class="one-one-input" id="loan_fin_date_1" value="0.0">
+        </div>
+        <div class="loans-block">
+            <select class="one-tree-input" id="loan_type_2" value="None">
+                <option>None</option>
+                <option>Invest</option>
+                <option>Current assets</option>
+            </select>
+            <input type="text" placeholder="Price %" class="one-one-input" id="loan_amount_2" value="0.0">
+            <input type="text" placeholder="Amount" class="one-one-input" id="loan_price_2" value="0.0">
+            <input type="text" placeholder="Final date" class="one-one-input" id="loan_fin_date_2" value="0.0">
+        </div>
+        <div class="loans-block">
+            <select class="one-tree-input" id="loan_type_3" value="None">
+                <option>None</option>
+                <option>Invest</option>
+                <option>Current assets</option>
+            </select>
+            <input type="text" placeholder="Price %" class="one-one-input" id="loan_amount_3" value="0.0">
+            <input type="text" placeholder="Amount" class="one-one-input" id="loan_price_3" value="0.0">
+            <input type="text" placeholder="Final date" class="one-one-input" id="loan_fin_date_3" value="0.0">
+        </div>
+        <!-- <div class="loans-block">
+            <select class="one-tree-input" id="loan_type_4" value="None">
+                <option>None</option>
+                <option>Invest</option>
+                <option>Current assets</option>
+            </select>
+            <input type="text" placeholder="Price %" class="one-one-input" id="loan_amount_4" value="0.0">
+            <input type="text" placeholder="Amount" class="one-one-input" id="loan_price_4" value="0.0">
+            <input type="text" placeholder="Final date" class="one-one-input" id="loan_fin_date_4" value="0.0">
+        </div>
+        <div class="loans-block">
+            <select class="one-tree-input" id="loan_type_5" value="None">
+                <option>None</option>
+                <option>Invest</option>
+                <option>Current assets</option>
+            </select>            
+            <input type="text" placeholder="Price %" class="one-one-input" id="loan_amount_5" value="0.0">
+            <input type="text" placeholder="Amount" class="one-one-input" id="loan_price_5" value="0.0">
+            <input type="text" placeholder="Final date" class="one-one-input" id="loan_fin_date_5" value="0.0">
+        </div> -->
     </div>
     <div class="analyze-frame">
         <h3>Analyze</h3>
         <button onclick="calculate()">Analyze</button>
     </div>
-
-
 </body>
 </html>
