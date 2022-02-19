@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +10,66 @@
 
 </head>
 <body>
-    <!-- Main Frame -->
-    <div>
+    <!-- Frame with Clients name and applictaion amounts -->
+    <div class="general-frame">
+        <div>
+            <h3>Application loans amount:</h3>
+        </div>
+        <div>
+            <div>
+                <h4>Loan #1</h4>
+                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_1">
+                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_1">
+                <input type="text" placeholder="Month" class="short-input" id="car_maturity_1">
+                <input type="text" placeholder="Price %" class="short-input" id="car_price_1">
+            </div>
+            <div>
+                <h4>Loan #2</h4>
+                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_2">
+                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_2">
+                <input type="text" placeholder="Month" class="short-input" id="car_maturity_2">
+                <input type="text" placeholder="Price %" class="short-input" id="car_price_2">
+            </div>
+            <div>
+                <h4>Loan #3</h4>
+                <input type="text" placeholder="Car price tsd UAH" class="long-input" id="car_value_3">
+                <input type="text" placeholder="Advance %" class="short-input" id="car_advance_3">
+                <input type="text" placeholder="Month" class="short-input" id="car_maturity_3">
+                <input type="text" placeholder="Price %" class="short-input" id="car_price_3">
+            </div>
+        </div>
 
     </div>
+    <!-- Frame with financical information -->
+    <div class="finance-frame">
+        <div>
+            <h3>Financical Parametrs:</h3>
+        </div>
+        <div>
+            <h4>Revenue</h4>
+            <input type="text" placeholder="Periods" class="wide-input" id="period"><br>
+            <input type="text" placeholder="Revenue" class="wide-input" id="revenue"><br>
+            <input type="text" placeholder="Operation revenue" class="wide-input" id="op_rev">
+            <input type="text" placeholder="Operation expenses" class="wide-input" id="op_exp"><br>
+            <input type="text" placeholder="Amortization" class="wide-input" id="amortization"><br>
+            <input type="text" placeholder="Current revenue" class="wide-input" id="cur_rev">
+            <input type="text" placeholder="Current expenses" class="wide-input" id="cur_exp"><br>
+        </div>
+        <div>
+            <h4>Equity and balance</h4>
+            <input type="text" placeholder="Equity" class="wide-input">
+            <input type="text" placeholder="Balance" class="wide-input">
+        </div>
+    </div>
+    <!-- Frame with loan portfolio -->
+    <div class="loans-frame">
+
+    </div>
+    <div class="analyze-frame">
+        <h3>Analyze</h3>
+        <button onclick="calculate()">Analyze</button>
+    </div>
+
+
 </body>
 </html>

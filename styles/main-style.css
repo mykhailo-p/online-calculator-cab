@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.general-frame {
+  background-color: aqua;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.finance-frame {
+  background-color: aquamarine;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.loans-frame {
+  background-color: deepskyblue;
+  width: 400px;
+}
+
+/* Loans field style */
+
+h4 {
+  padding: 0;
+  margin: 10px 2px;
+  box-sizing: border-box;
+}
+
+.long-input {
+  width: 150px;
+  background: none;
+  border: 2px solid teal;
+  margin: 2px 1px;
+  padding: 2px;
+}
+
+.short-input {
+  width: 55px;
+  background: none;
+  border: 2px solid teal;
+  margin: 2px 1px;
+  padding: 2px;
+}
+
+.wide-input {
+  width: 45%;
+  background: none;
+  border: 2px solid teal;
+  margin: 2px 1px;
+  padding: 2px;
+}
+
+.analyze-frame {
+  background-color: cornflowerblue;
+  width: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+}
